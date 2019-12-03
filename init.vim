@@ -3,14 +3,14 @@ let g:python_host_prog='/usr/bin/python3'
 set nocompatible
 filetype off
 
-call plug#begin("~/.nvim/bundle")
+call plug#begin("~/.config/nvim/bundle")
 " Plugin List
 Plug 'rking/ag.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'Valloric/MatchTagAlways'
 Plug 'jlanzarotta/bufexplorer'
-Plug 'bigeagle/molokai'
+"Plug 'bigeagle/molokai'
 Plug 'bling/vim-airline'
 Plug 'hkupty/nvimux'
 Plug 'scrooloose/nerdtree'
@@ -70,12 +70,12 @@ Plug 'junegunn/fzf.vim'
 " Plug 'roxma/ncm-clang'
 " Plug 'roxma/nvim-completion-manager', {'for': ['python', 'go', 'typescript']}
 
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2-jedi'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-tmux'
-Plug 'ncm2/ncm2-bufword'
+"Plug 'ncm2/ncm2'
+"Plug 'roxma/nvim-yarp'
+"Plug 'ncm2/ncm2-jedi'
+"Plug 'ncm2/ncm2-path'
+"Plug 'ncm2/ncm2-tmux'
+"Plug 'ncm2/ncm2-bufword'
 
 " Plug 'Valloric/YouCompleteMe', {'for': ['cpp', 'hpp', 'c', 'h']}
 Plug 'Shougo/echodoc.vim'
@@ -86,13 +86,13 @@ Plug 'caio/querycommandcomplete.vim'
 Plug 'justinmk/vim-gtfo'
 Plug 'freitass/todo.txt-vim'
 
-Plug '~/.nvim/bundle/colorpicker'
+Plug '~/.config/nvim/bundle/colorpicker'
 call plug#end()
 
 
 " UI
 if !exists("g:vimrc_loaded")
-    colorscheme molokai
+    " colorscheme molokai
     let g:molokai_original = 1
     if has("gui_running")
         set guioptions-=T "隐藏工具栏
@@ -115,12 +115,12 @@ filetype indent on
 
 set list lcs=tab:\¦\   
 
-if has("autocmd")  " go back to where you exited
-    autocmd BufReadPost *
-        \ if line("'\"") > 0 && line ("'\"") <= line("$") |
-        \   exe "normal g'\"" |
-        \ endif
-endif
+"if has("autocmd")  " go back to where you exited
+"    autocmd BufReadPost *
+"        \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+"        \   exe "normal g'\"" |
+"        \ endif
+"endif
 
 if has('mouse')
     set mouse=a
@@ -141,7 +141,7 @@ set showmatch
 set matchtime=0
 set nobackup
 set nowritebackup
-set directory=~/.nvim/.swapfiles//
+set directory=~/.config/nvim/.swapfiles//
 
 if has('nvim')
   set termguicolors
@@ -212,26 +212,26 @@ function ScriptHeader()
 endfunction
 
 
-source ~/.nvim/config/airline.vim
-source ~/.nvim/config/python.vim
-source ~/.nvim/config/tagbar.vim
-source ~/.nvim/config/nerdtree.vim
-source ~/.nvim/config/syntastic.vim
-source ~/.nvim/config/completion.vim
-source ~/.nvim/config/ultisnips.vim
-source ~/.nvim/config/rainbow_brackets.vim
-source ~/.nvim/config/latex.vim
-source ~/.nvim/config/vim-go.vim
-source ~/.nvim/config/pandoc.vim
-source ~/.nvim/config/scss.vim
-source ~/.nvim/config/querycommand.vim
-source ~/.nvim/config/localvimrc.vim
-source ~/.nvim/config/ctrlp.vim
-source ~/.nvim/config/vim-notes.vim
-source ~/.nvim/config/indentLine.vim
-source ~/.nvim/config/noplaintext.vim
-source ~/.nvim/config/json.vim
-source ~/.nvim/config/terminal.vim
+source ~/.config/nvim/config/airline.vim
+source ~/.config/nvim/config/python.vim
+source ~/.config/nvim/config/tagbar.vim
+source ~/.config/nvim/config/nerdtree.vim
+source ~/.config/nvim/config/syntastic.vim
+source ~/.config/nvim/config/completion.vim
+source ~/.config/nvim/config/ultisnips.vim
+"source ~/.config/nvim/config/rainbow_brackets.vim
+source ~/.config/nvim/config/latex.vim
+source ~/.config/nvim/config/vim-go.vim
+source ~/.config/nvim/config/pandoc.vim
+source ~/.config/nvim/config/scss.vim
+source ~/.config/nvim/config/querycommand.vim
+source ~/.config/nvim/config/localvimrc.vim
+source ~/.config/nvim/config/ctrlp.vim
+source ~/.config/nvim/config/vim-notes.vim
+source ~/.config/nvim/config/indentLine.vim
+source ~/.config/nvim/config/noplaintext.vim
+source ~/.config/nvim/config/json.vim
+source ~/.config/nvim/config/terminal.vim
 
 " Load local config if exists
 if filereadable(expand("~/.nvim/config/local.vim"))
