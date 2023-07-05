@@ -1,6 +1,7 @@
 # NeoVim config files
 
-Just for reference, not in use, deprecated
+Just for reference, not in use, deprecated, 
+Using https://github.com/zzuse/nvim_config.git instead.
 
 ## HowTo
 
